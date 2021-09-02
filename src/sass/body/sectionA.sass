@@ -1,0 +1,102 @@
+/*-------------- lien sass --------------*/
+// variables
+@import "../variables"
+
+
+/*---------------- style -------------*/
+// Section 1
+.titre
+    text-align: center
+    padding: 15px
+    animation: apparition1 1.5s  ease-out
+#section1
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #000
+    min-height: 85vh
+    
+
+    .myCol
+        position: relative
+        width: 100%
+        display: flex
+        align-items: center
+        padding-left: 80px
+
+        .loader
+            position: relative
+            width: 200px
+            height: 200px
+            border-radius: 50%
+            background: #000000
+            animation: animate2 2s linear infinite
+
+            @keyframes animate2
+                0%
+                    transform: rotate(0deg)
+                100%
+                    transform: rotate(360deg)
+
+        .loader::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 50%
+            height: 100%
+            background: linear-gradient(to top, transparent, #00ff7380) 
+            background-size: 100px 180px
+            background-repeat: no-repeat
+            border-top-left-radius: 100px
+            border-bottom-left-radius: 100px
+
+        .loader::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 20px
+            height: 20px
+            background: #00ff88
+            border-radius: 50%
+            z-index: 10
+            box-shadow: 0 0 10px #00ff80, 0 0 20px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88, 0 0 50px #00ff88, 0 0 60px #00ff88, 0 0 70px #00ff88, 0 0 80px #00ff88, 0 0 90px #00ff88, 0 0 100px #00ff88, 0 0 110px #00ff88
+        
+    span
+        content: ''
+        position: absolute
+        top: 20px
+        left: 20px
+        right: 20px
+        bottom: 20px
+        background: #000000
+        border-radius: 50%
+        z-index: 2
+        
+
+    .mycard
+        width: 100%
+        display: flex
+        align-items: center
+        color: $white
+        padding-right: 80px
+        animation: apparition1 1.5s  ease-out
+        
+@media screen and ( min-width: 576px )
+    .myCol
+        position: relative
+        width: 100%
+        display: flex
+        align-items: center
+        padding-left: 80px
+        -webkit-box-reflect: below 1px linear-gradient(#0001, #0004)
+    .mycard
+        width: 100%
+        display: flex
+        align-items: center
+        color: $white
+        padding-right: 80px
+        -webkit-box-reflect: below 1px linear-gradient(#0001, #0004)
+        

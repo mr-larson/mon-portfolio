@@ -1,0 +1,147 @@
+/*-------------- lien sass --------------*/
+// variables
+@import "variables"
+
+
+/*---------------- style -------------*/
+
+// Navbar    
+.navbar
+    min-height: 12vh
+
+    .navbar-brand
+        transition: transform 250ms, opacity 400ms
+        animation: apparition1 1.5s 0.5s ease-out
+
+        img
+            height: 9vh
+        
+    .nav-link
+        padding-left: 10px
+        border-radius: 20px
+        margin: 0 5px
+        transition: transform 250ms, opacity 400ms
+        animation: apparition2 1.5s 0.2s ease-out
+        
+
+        @keyframes apparition2
+            0%
+                opacity: 0
+                transform: translateY(-25px)  
+            100%
+                opacity:1
+                transform: none
+        
+    .nav-link:hover
+        color: $green!important 
+        background: $white
+        box-shadow: 0 0 10px $white, 0 0 40px #bec4bf
+        transform: scale(1.05)
+        animation: apparition5 0.1s 0.1s ease
+
+        @keyframes apparition5
+            0%
+                opacity: 2 
+            100%
+                opacity: 1
+                
+
+// Header
+.header
+    position: relative
+    background: url(../img/opg-img.jpg),no-repeat
+    background-size: cover
+    background-position: bottom
+    height: 100vh
+
+    .title
+        display: flex
+        position: absolute
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        
+        h1
+            text-transform: uppercase
+            animation: apparition 2s  ease-out
+
+            @keyframes apparition
+                0%
+                    opacity: 0
+                    transform: translateY(-40px)  
+                100%
+                    opacity:1
+                    transform: none
+            
+
+        .contactBtn
+            border-radius: 20px
+            color: $white
+            background: #000
+            z-index: 2
+            animation: apparition1 3s  ease-out
+            
+        .contactBtn:hover 
+            box-shadow: 0 0 5px #000
+            background: $green
+
+        .modal
+            background: #00000077
+
+            .myCont
+                background: #0000008e
+                box-shadow: 0 0 10px $white, 0 0 40px #bec4bf
+                animation: apparition1 1.5s  ease-out
+
+                @keyframes apparition1
+                    0%
+                        opacity: 0
+                        transform: translateX(-50px)  
+                    
+                    100%
+                        opacity:1
+                        transform: none 
+
+                h5
+                    font-size: 2.2em
+                    font-weight: bold
+                    color: $white
+                    text-shadow: 0 0 1px #FFF
+                    letter-spacing: 2px
+
+                .bac
+                    background: url(../img/neon.jpg),no-repeat
+                    background-position: center
+                    background-size: cover
+
+                    label
+                        font-weight: bold
+                        color: $white
+                        text-shadow: 0 0 0.2px #FFF
+                        letter-spacing: 2px
+                        
+                    input 
+                        border-radius: 5px
+                    textarea 
+                        border-radius: 5px
+                    
+
+        
+            
+// Typed Text
+.typed-text
+    font-size: 2rem
+    
+
+// Particles JS
+.tsparticles-canvas-el
+    position: absolute
+    height: 100vh
+    width: 100vw
+    z-index: 1
+    
+        

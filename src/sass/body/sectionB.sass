@@ -1,0 +1,111 @@
+/*-------------- lien sass --------------*/
+// variables
+@import "../variables"
+
+
+/*---------------- style -------------*/
+// Section 2
+.card
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 50vh
+    background: #000
+
+    h3
+        font-weight: 500
+        font-size: 3rem
+        z-index: 1
+        animation: apparition2 1.5s  ease-out
+
+    .row
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .box
+            margin: 10vh 20px  
+            height: 70vh         
+            color: $white
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: 0.5s
+            background: rgba(255,255,255,0.05)
+            border-radius: 10px
+            overflow: hidden
+            z-index: 1
+            backdrop-filter: blur(5px)
+            border-top: 1px solid rgba(255, 255,255, 0.2)
+            border-left: 1px solid rgba(255, 255,255, 0.2)
+            box-shadow: 5px 5px 30px rgba(0,0,0)
+
+            .content
+                
+                img
+                    border-radius: 5px
+                    margin-bottom: 10px
+                    height: 30vh
+                a
+                    color: $green
+           
+        .box:hover
+            transition: 0.8s
+            transform: translateY(-15px)
+
+
+.card::before
+    content: ''
+    position: absolute
+    top: 0px
+    left: 0
+    width: 70%
+    height: 100%
+    background: $green
+    clip-path: circle(25% at 43% 30%)
+    animation: animation3 6.5s infinite
+
+    @keyframes animation3
+            0%
+                left: 0px 
+            20%
+                left: 50px
+            50%
+                left: 150px
+            70%
+                left: -20px
+                
+            100%
+                left: 0px
+                
+.card::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    width: 40%
+    height: 100%
+    background: $green
+    clip-path: circle(15% at 50% 60%)
+    animation: animation4 5.5s infinite
+
+    @keyframes animation4
+            0%
+                top: 10px
+            20%
+                left: 500px
+                top: -70px
+            60%
+                left: 200px
+                top: -200px
+            100%
+                left: 800px
+                top: 10px
+
+@media screen and ( max-width: 576px )
+    .card::before
+        display: none
+    .card::after
+        display: none
+    
