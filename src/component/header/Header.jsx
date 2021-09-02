@@ -29,7 +29,7 @@ export default class Header extends Component {
                     <h1>web development front-end and back-end</h1>
                     <Typed
                         className="typed-text text-success"
-                        strings={["HTML", "CSS", "SASS", "Bootstrap", "Java Script", "React", "Python"]}
+                        strings={["HTML", "CSS", "SASS", "Bootstrap", "Tailwind", "JavaScript", "React", "Php", "Laravel"]}
                         typeSpeed={90}
                         backSpeed={70}
                         loop
